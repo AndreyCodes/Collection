@@ -1,0 +1,11 @@
+//windows
+SecureZeroMemory
+
+//Linux
+Create Shared library with analog SecureZeroMemory, then explicit link with(dlopen)
+then dlsym for get procedure address.
+
+//gcc 
+#pragma optimize("-no-dead-code-removal")
+memset(Password, 0, sizeof(Password));
+#pragma optimize("-dead-code-removal")
